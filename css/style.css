@@ -2,9 +2,88 @@
 
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css");
 
+
+
 * {
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-primary: "Nunito", sans-serif;
+    --font-secondary: "Baloo Da 2", sans-serif;
+    --font-action: "Mulish", sans-serif;
+    --color-primary: #1DB954;
+}
+
+.hamburger-menu {
+    position: fixed;
+    width: 2em;
+    height: 2em;
+    z-index: 50;
+    right: 2em;
+    top: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.show-menu .hamburger-menu {
+    right: 16em;
+}
+
+.line {
+    width: 100%;
+    height: .15em;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 3px 0.5px #111111;
+    transition: all 2s;
+}
+
+.hamburger-menu span {
+    position: absolute;
+    left: 3em;
+    background-color: var(--color-primary);
+    padding: 10px 30px;
+    font-family: var(--font-action);
+    color: #ffffff;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.hamburger-menu span::before {
+    content: '';
+    position: absolute;
+    border-right: .7em solid #1DB954;
+    border-left: .7em solid transparent;
+    border-top: .7em solid transparent;
+    border-bottom: .7em solid transparent;
+    left: -1.3em;
+}
+
+.show-menu .hamburger-menu:hover span {
+    opacity: 1;
+}
+
+.show-menu #line2 {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.show-menu #line1 {
+    transform: rotate(45deg) translate(.3em, .655em);
+    background-color: var(--color-primary);
+}
+
+.show-menu #line3 {
+    transform: rotate(-45deg) translate(.3em, -.655em);
+    background-color: var(--color-primary);
 }
 
 /* HEADER */
@@ -50,7 +129,7 @@
     color: #ffffff;
     font-size: 4em;
     font-weight: 600;
-    font-family: "Nunito", sans-serif;
+    font-family: var(--font-primary);
     text-shadow: 0.1em 0.1em 2px rgba(0,0,0,0.2);
     line-height: 1.2;
     margin-bottom: .5em;
@@ -59,7 +138,7 @@
 }
 
 .header .infos p {
-    font-family: "Mulish", sans-serif;
+    font-family: var(--font-secondary);
     font-size: 1.8em;
     font-weight: 200;
     color: #ffffff;
@@ -71,27 +150,28 @@
 
 .header button {
     width: 250px;
-    font-family: "Nunito", sans-serif;
+    font-family: var(--font-primary);
     font-size: 1em;
-    font-weight: 600;
+    font-weight: bold;
     display: block;
     margin: 0 auto;
     color: #000;
     padding: 15px 0;
-    background-color: #1DB954;
+    background-color: var(--color-primary);
     border: none;
     border-radius: 30px;
     text-transform: uppercase;
-    color: #000000;
+    color: #292929;
     letter-spacing: 2px;
     outline: none;
     opacity: 0.6;
+    transition: opacity 1s;
     animation: moveBannerDown 2s;
 }
 
 .header button:hover {
     box-shadow: 1px 1px 30px 3px #111111;
-    background-color: #1DB954;
+    background-color: var(--color-primary);
     opacity: 1;
     cursor: pointer;
     color: #ffffff;
@@ -114,5 +194,87 @@
     
     100% {
         transform: translateY(0) rotateY(0);
+    }
+}
+
+.sidebar {
+    width: 20em;
+    height: 100vh;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    right: -20em;
+    transition: all 1s;
+}
+
+.show-menu .sidebar {
+    right: 0;
+    opacity: .7;
+    animation: moveUp 1s;
+}
+
+.menu {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu-item {
+    text-align: center;
+    padding: .8em;
+    font-size: 1.125em;
+}
+
+.menu-link {
+    font-family: var(--font-action);
+    font-size: 1.25em;
+    color: #464646;
+    transition: color .5s;
+}
+
+.menu-link:hover {
+    color: var(--color-primary);
+    font-weight: bolder;
+}
+
+.social-media {
+    width: 100%;
+    position: absolute;
+    bottom: 2em;
+    display: flex;
+    justify-content: center;
+}
+
+.social-media i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5em;
+    width: 1.7em;
+    font-size: 2em;
+    color: #464646;
+}
+
+.social-media .fab {
+    opacity: 0.5;
+    transition: opacity 1s;
+}
+
+.social-media .fab:hover {
+    color: var(--color-primary);
+    opacity: 1;
+    cursor: pointer;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(110em);
+        
+    }
+
+    100% {
+       transform: translateY(0em);
+       
     }
 }

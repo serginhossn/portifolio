@@ -1,4 +1,5 @@
 # portifolio
+
 Portifolio para estudo
 
 
@@ -8,7 +9,7 @@ O gerenciamento das tarefas será feito pelo próprio GitHub
 
 # Ícones
 
-:package: Funcionalidade
-:up: Atualização
-:beatle: Correção
-:checkered_flag: Release
+- :package: Funcionalidade
+- :up: Atualização
+- :beetle: Correção
+- :checkered_flag: Release
