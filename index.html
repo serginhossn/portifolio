@@ -31,8 +31,8 @@
                 <button>Saiba mais</button>                
             </div>
         </header>
-
-        <div class="sidebar">
+        
+        <aside class="sidebar">
             <nav>
                 <ul class="menu">
                     <li class="menu-item"><a href="" class="menu-link">Home</a></li>
@@ -48,9 +48,156 @@
                 <a href=""><i class="fab fa-facebook-f"></i></a>
                 <a href=""><i class="fab fa-twitter"></i></a>
             </div>
-        </div>
-    </div>
+        </aside>
 
+        <section class="knowledge-section">
+            <div class="header-section">
+                <h1>Conhecimentos</h1>
+            </div>
+            <div class="knowledges">
+                <div class="knowledge">
+                    <div class="knowledge-header">
+                        <i class="fab fa-html5"></i>
+                        <h3>html</h3>
+                    </div>
+                    <div class="knowledge-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non tellus vitae tortor pellentesque mattis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non tellus vitae tortor pellentesque mattis. </p>
+                    </div>
+                </div>
+                <div class="knowledge">
+                    <div class="knowledge-header">
+                        <i class="fab fa-css3-alt"></i>
+                        <h3>css</h3>
+                    </div>
+                    <div class="knowledge-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non tellus vitae tortor pellentesque mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="knowledge">
+                    <div class="knowledge-header">
+                        <i class="fab fa-js-square"></i>
+                        <h3>javascript</h3>
+                    </div>
+                    <div class="knowledge-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non tellus vitae tortor pellentesque mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non tellus vitae tortor pellentesque mattis.</p>
+                    </div>
+                </div>
+                <div class="knowledge">
+                    <div class="knowledge-header">
+                        <i class="fab fa-github"></i>
+                        <h3>git/github</h3>
+                    </div>
+                    <div class="knowledge-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non tellus vitae tortor pellentesque mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non tellus vitae tortor pellentesque mattis. </p>
+                    </div>
+                </div>
+                <div class="knowledge">
+                    <div class="knowledge-header">
+                        <i class="fab fa-react"></i>
+                        <h3>react</h3>
+                    </div>
+                    <div class="knowledge-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non tellus vitae tortor pellentesque mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non tellus vitae tortor pellentesque mattis.</p>
+                    </div>
+                </div>
+                <div class="knowledge">
+                    <div class="knowledge-header">
+                        <i class="fab fa-vuejs"></i>
+                        <h3>vue</h3>
+                    </div>
+                    <div class="knowledge-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non tellus vitae tortor pellentesque mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non tellus vitae tortor pellentesque mattis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non tellus vitae tortor pellentesque mattis.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="header-section">
+                <h1>Projetos</h1>
+            </div>
+            <div class="projects">
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="img/proj1.jpg" alt="Projeto 1">
+                    </div>
+                    <div class="card-info">
+                        <h2>Projeto 1</h2>
+                        <h3>HTML</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                        <button>Saiba Mais</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="img/proj2.jpg" alt="Projeto 2">
+                    </div>
+                    <div class="card-info">
+                        <h2>Projeto 2</h2>
+                        <h3>HTML, CSS</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                        <button>Saiba Mais</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="img/proj3.jpg" alt="Projeto 3">
+                    </div>
+                    <div class="card-info">
+                        <h2>Projeto 3</h2>
+                        <h3>Javascript</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                        <button>Saiba Mais</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="header-section">
+                <h1>Contato</h1>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-image">
+                    <img src="img/contact_icon-icons.com_64661.svg" alt="Contact Image">
+                </div>
+                <div class="contact-right">
+                    <form class="form-right" action="">
+                        <input type="text" name="Nome" placeholder="Informe seu nome" required>
+                        <input type="email" name="Email" placeholder="Informe seu email" required>
+                        <textarea name="Mensagem" placeholder="Digite sua mensagem" cols="30" rows="10" required></textarea>
+                        <button>Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="budget-section">
+            <div class="budget-wrapper">
+                <h1>Faça um orçamento</h1>
+                <form>
+                    <label for="quantity">Quantidade de Páginas</label>
+                    <input class="nm" type="number" min="1" name="quantity" id="qty">
+                    <label for="js">Necessito de um script JS</label>
+                    <input type="checkbox" name="js" id="js">
+                    <label>Layout</label>
+                    <div class="group-layout">
+                        <div>
+                            <input type="radio" name="layout" id="layout-yes">
+                            <label for="layout-yes">Necessito de um layout</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="layout" id="layout-no">
+                            <label for="layout-no">Já tenho um layout</label>
+                        </div>
+                    </div>
+                    <label for="time">Prazo</label>
+                    <input type="range" name="time" id="time">
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </div>
 
     <script src="js/script.js"></script>
 
